@@ -1,7 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/planets-game")
+@app.route("/planets-game", methods=["GET","POST"])
 def planets_game():
-    return render_template("planets-game.html")
+    return render_template("planets.html")
