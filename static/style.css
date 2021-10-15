@@ -1,0 +1,17 @@
+.input-form {
+    font-size: 1rem;
+}
+
+form {
+    display: flex;
+    font-size: 1rem;
+    padding: 0;
+}
+
+form input {
+    margin-top: .5rem;
+
+    padding-left: .25rem;
+    font-size: .75rem;
+
+}
