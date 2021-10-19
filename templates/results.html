@@ -4,10 +4,10 @@
 <div class="results-game">
     <h2> Here goes your results.</h2>
     {% for number in range(planets_list| length) %}
-        {% if all_planets[number] == planets_list[number] %}
-        <p>{{number}} . {{planets_list[number]}}</p>
+        {% if all_planets[number].lower() == planets_list[number].lower() %}
+        <p>{{number + 1}} . {{planets_list[number].capitalize()}}</p>
         {% else %}
-        <p>{{number}} . Wrong</p>
+        <p>{{number + 1}} . Wrong</p>
         {% endif %}
     {% endfor %}
 </div>

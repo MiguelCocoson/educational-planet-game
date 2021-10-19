@@ -7,6 +7,16 @@ body {
     font-size: 1rem;
 }
 
+h1 {
+    color: white;
+}
+h2 {
+    color: white;
+}
+p {
+    color: white;
+    font-size: 1rem;
+}
 form {
     display: flex;
     font-size: 1rem;
