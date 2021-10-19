@@ -1,0 +1,14 @@
+
+{% extends "planets.html" %}
+{% block content %}
+<div class="results-game">
+    <h2> Here goes your results.</h2>
+    {% for number in range(planets_list| length) %}
+        {% if all_planets[number] == planets_list[number] %}
+        <p>{{number}} . {{planets_list[number]}}</p>
+        {% else %}
+        <p>{{number}} . Wrong</p>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
