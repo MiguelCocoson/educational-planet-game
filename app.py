@@ -21,7 +21,7 @@ def results():
     planet6 = req["planet6"]
     planet7 = req["planet7"]
     planet8 = req["planet8"]
-
+    
     all_planets = [planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8]
     planets_list = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
 
