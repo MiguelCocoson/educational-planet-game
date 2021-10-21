@@ -1,0 +1,51 @@
+body {
+    font-family: "Syne Mono", monospace;
+}
+
+header {
+    background-color: #46a0b6a9;
+    font-family: "Syne Mono", monospace;
+    padding: 1%;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+h2,
+h3 {
+  font-family: "Syne Mono", monospace;
+  padding: 2%;
+  font-size: 15px;
+}
+
+footer {
+    background-color: rgba(255, 166, 0, 0.808);
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    background-color: #466fb6a1;
+    text-align: center;
+    padding: 5%;
+}
+
+#content {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+#login {
+    padding: 10px;
+    background-color: #b64646;
+    border-radius: 5px;
+    color: black;
+    margin: 15px;
+}
+
+.inputs {
+    padding: 10px;
+    padding-left: 20px;
+}
