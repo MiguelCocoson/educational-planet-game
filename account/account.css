@@ -7,11 +7,13 @@ header {
     font-family: "Syne Mono", monospace;
     padding: 1%;
     font-size: 30px;
+    margin: auto;
 }
 
 h2,
 h3 {
   font-family: "Syne Mono", monospace;
+  padding: 2%;
   font-size: 15px;
 }
 
@@ -32,21 +34,9 @@ main {
     text-align: center;
 }
 
-#login {
+#play {
     padding: 10px;
-    background-color: #7746b6e7;
+    background-color: #46b64cc4;
     border-radius: 10px;
     margin: 15px;
-}
-
-.inputs {
-    padding: 10px;
-}
-
-.links {
-    max-width: 200px;
-    margin: 0 auto;
-    background-color: #ceda2dd3;
-    padding: 10px;
-    border-radius: 10px;
 }
