@@ -82,7 +82,7 @@ def home():
 @app.route('/game', methods=['GET', 'POST'])
 @login_required
 def game():
-    return render_template('game.html')
+    return render_template("planets.html")
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -118,9 +118,7 @@ def registration():
 
     return render_template('registration.html', form=form)
 
-@app.route("/planets-game")
-def planets_game():
-    return render_template("planets.html")
+    
 
 @app.route("/results", methods=["POST"])
 def results():
