@@ -1,0 +1,47 @@
+body {
+    font-family: "Syne Mono", monospace;
+}
+
+header {
+    background-color: #46a0b6ce;
+    font-family: "Syne Mono", monospace;
+    padding: 1%;
+    font-size: 30px;
+}
+
+h2,
+h3 {
+  font-family: "Syne Mono", monospace;
+  padding: 2%;
+  font-size: 15px;
+}
+
+footer {
+    background-color: rgba(255, 166, 0, 0.863);
+    padding: 15px;
+}
+
+main {
+    background-color: #466fb6d3;
+    padding: 5%;
+}
+
+#content {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+#create_account {
+    padding: 10px;
+    background-color: #b64646;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.inputs {
+    padding: 10px;
+    padding-right: 20%;
+    text-align: right;
+}
