@@ -71,6 +71,53 @@ def load_user(user_id):
 if __name__ == '__main__':
     app.run()
 
+# set up routes
+
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+
+@app.route('/game', methods=['GET', 'POST'])
+@login_required
+def game():
+    return render_template('game.html')
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = UserTable.query.filter_by(username=form.username.data).first()
+        if user:
+            if bcrypt.check_password_hash(user.password, form.password.data):
+                login_user(user)
+                return redirect(url_for('game'))
+    return render_template('login.html', form=form)
+
+
+@app.route('/logout', methods=['GET', 'POST'])
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
+
+
+@app.route('/registration', methods=['GET', 'POST'])
+def registration():
+    form = RegistrationForm()
+
+    if form.validate_on_submit():
+        encrypted_password = bcrypt.generate_password_hash(form.password.data)
+        new_user = UserTable(username=form.username.data,
+                             password=encrypted_password)
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for('login'))
+
+    return render_template('registration.html', form=form)
+
 @app.route("/planets-game")
 def planets_game():
     return render_template("planets.html")
