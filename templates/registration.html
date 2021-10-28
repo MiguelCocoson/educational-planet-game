@@ -5,18 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/registration.css">
     <title>Create an account</title>
 </head>
 
-<body>
-    <h1>Registration</h1>
-    <form action="" method="post">
-        {{form.hidden_tag()}}
-        {{form.username}}
-        {{form.password}}
-        {{form.submit}}
-    </form>
-    <p>Already registered?</p>
-    <a href="{{url_for('login')}}">Login here</a>
+<body style="background: url(https://p3.itc.cn/q_70/images03/20211004/af154779a0214b3c9533e98c0e0a385b.jpeg) 50% 0%;">
+    <div id="content">
+        <section>
+            <header>
+                <h1>Planetarium</h1>
+            </header>
+        </section>
+        <hr>
+        <section>
+            <main>
+                <h1>Create Account</h1>
+                <article>
+                    <form action="" method="post">
+                        {{form.hidden_tag()}}
+                        <div class="inputs">
+                            {{form.username}}
+                        </div>
+                        <div class="inputs">
+                            {{form.password}}
+                        </div>
+                        <div>
+                            {{form.submit}}
+                        </div>
+                        <div class="links">
+                            <a href="{{url_for('login')}}">Login here</a>
+                        </div>
+                    </form>
+                </article>
+        </section>
+        <hr>
+        </main>
+        <footer>
+            &copy;2021 | Planetarium | Developeando
+        </footer>
+    </div>
+</body>
 
 </html>
