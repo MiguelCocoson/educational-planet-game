@@ -2,13 +2,22 @@
 {% extends "planets.html" %}
 {% block content %}
 <div class="results-game">
-    <h2> Here goes your results.</h2>
+    <h2> You got {{points}}/8 correct!</h2>
     {% for number in range(planets_list| length) %}
         {% if all_planets[number].lower() == planets_list[number].lower() %}
-        <p>{{number + 1}}. {{planets_list[number].capitalize()}} - Correct</p>
+            <p>{{number + 1}}. {{planets_list[number].capitalize()}} - Correct</p>
         {% else %}
-        <p>{{number + 1}}. Wrong</p>
+            <p>{{number + 1}}. Wrong</p>
         {% endif %}
     {% endfor %}
+    {% if points == 8 %}
+    <p>Excellent Job! You have earned a Gold Badge!</p>
+    {% elif points >= 5 and points < 8 %}
+    <p>Great Job! You have earned a Silver Badge!</p>
+    {% elif points >= 3 and points < 5%}
+    <p>Good Job! You have earned a Bronze Badge!</p>
+    {% else %}
+    <p>Come on! You can do better than that! Try again.</p>
+    {% endif %}
 </div>
 {% endblock %}
