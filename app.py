@@ -94,7 +94,13 @@ def login():
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
                 return redirect(url_for('game'))
+            else:
+                return redirect(url_for('incorrect'))
     return render_template('login.html', form=form)
+
+@app.route('/incorrect')
+def incorrect():
+    return render_template('incorrect.html')
 
 
 @app.route('/logout', methods=['GET', 'POST'])
@@ -109,14 +115,23 @@ def registration():
     form = RegistrationForm()
 
     if form.validate_on_submit():
-        encrypted_password = bcrypt.generate_password_hash(form.password.data)
-        new_user = UserTable(username=form.username.data,
-                             password=encrypted_password)
-        db.session.add(new_user)
-        db.session.commit()
-        return redirect(url_for('login'))
+        user = UserTable.query.filter_by(username=form.username.data).first()
+        if user:
+            # check if user is already registered
+            return redirect(url_for('existing'))
+        else:
+            encrypted_password = bcrypt.generate_password_hash(form.password.data)
+            new_user = UserTable(username=form.username.data,
+                                password=encrypted_password)
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect(url_for('login'))
 
     return render_template('registration.html', form=form)
+
+@app.route('/existing')
+def existing():
+    return render_template('existing.html')
 
     
 
