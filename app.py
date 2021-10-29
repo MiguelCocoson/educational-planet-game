@@ -1,14 +1,139 @@
-from flask import Flask, render_template, request, redirect, url_for
+# import dependencies
+from flask import Flask, render_template, url_for, redirect, request
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField
+from wtforms.fields.simple import SubmitField
+from wtforms.validators import InputRequired, Length, ValidationError
+from flask_bcrypt import Bcrypt
 
+# setup flask app
 app = Flask(__name__)
+# setup sqlalchemy db for the app
+db = SQLAlchemy(app)
+# setup sqlalchemy db file
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.db'
+# setup secret key for app
+app.config['SECRET_KEY'] = 'DevelopeandoPlanetas'
+# setup encryption for passwords
+bcrypt = Bcrypt(app)
+
+# create db model for users_table
+
+
+class UserTable(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), nullable=False)
+    # the length of the password is longer due to hashing
+    password = db.Column(db.String(80), nullable=False)
+
+# setup flask forms
+
+
+class RegistrationForm(FlaskForm):
+    username = StringField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Username"})
+    password = PasswordField(validators=[InputRequired(), Length(
+        min=4, max=40)], render_kw={"placeholder": "Password"})
+
+    submit = SubmitField("Create account")
+
+    # validate if user exists
+    def user_validation(self, username):
+        existing_username = UserTable.query.filter_by(
+            username=username.data).first()
+        if existing_username:
+            raise ValidationError(
+                "Username already in use, please pick a different one.")
+
+
+class LoginForm(FlaskForm):
+    username = StringField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Username"})
+    password = PasswordField(validators=[InputRequired(), Length(
+        min=4, max=40)], render_kw={"placeholder": "Password"})
+
+    submit = SubmitField("Login")
+
+
+# setup login manager
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = "login"
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return UserTable.query.get(int(user_id))
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
-@app.route("/planets-game")
-def planets_game():
+# set up routes
+
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+
+@app.route('/game', methods=['GET', 'POST'])
+@login_required
+def game():
     return render_template("planets.html")
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = UserTable.query.filter_by(username=form.username.data).first()
+        if user:
+            if bcrypt.check_password_hash(user.password, form.password.data):
+                login_user(user)
+                return redirect(url_for('game'))
+            else:
+                return redirect(url_for('incorrect'))
+    return render_template('login.html', form=form)
+
+@app.route('/incorrect')
+def incorrect():
+    return render_template('incorrect.html')
+
+
+@app.route('/logout', methods=['GET', 'POST'])
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
+
+
+@app.route('/registration', methods=['GET', 'POST'])
+def registration():
+    form = RegistrationForm()
+
+    if form.validate_on_submit():
+        user = UserTable.query.filter_by(username=form.username.data).first()
+        if user:
+            # check if user is already registered
+            return redirect(url_for('existing'))
+        else:
+            encrypted_password = bcrypt.generate_password_hash(form.password.data)
+            new_user = UserTable(username=form.username.data,
+                                password=encrypted_password)
+            db.session.add(new_user)
+            db.session.commit()
+            return redirect(url_for('login'))
+
+    return render_template('registration.html', form=form)
+
+@app.route('/existing')
+def existing():
+    return render_template('existing.html')
+
+    
 
 @app.route("/results", methods=["POST"])
 def results():

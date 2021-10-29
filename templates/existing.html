@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <title>Planets Game</title>
+</head>
+<body style="background: url(https://qph.fs.quoracdn.net/main-qimg-9d1b66c5c841ba7aa5c87b56e3377128) 50% 15%;">
+    <div id="content">
+        <section>
+            <header>
+                <h1>Planetarium</h1>
+            </header>
+        </section>
+        <hr>
+        <section>
+            <main>
+                <h1>Registration Failed</h1>
+                <article>
+                    <div>
+                        <h2>Your selected username already exist. 😕</h2>
+                        <a href="{{url_for('registration')}}"><input type="button" id="play"
+                                value="Create an account"></a><br>
+                        <a href="{{url_for('login')}}"><input type="button" id="play" value="Login"></a><br>
+
+                    </div>
+                </article>
+        </section>
+        <hr>
+        </main>
+        <footer>
+            &copy;2021 | Planetarium | Developeando
+        </footer>
+    </div>
+
+</html>

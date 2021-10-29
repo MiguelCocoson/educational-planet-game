@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/login.css">
+    <title>Login</title>
+</head>
+
+<body
+    style="background: url(https://photowalls.space/web/wallpapers/jupiter-big-beautiful-planet-in-solar-system/3200x2400.jpg) 50% 5%;">
+    <div id="content">
+        <section>
+            <header>
+                <h1>Planetarium</h1>
+            </header>
+        </section>
+        <hr>
+        <section>
+            <main>
+                <h1>Log In</h1>
+                <article>
+                    <form action="" method="post">
+                        {{form.hidden_tag()}}
+                        <div class="inputs">
+                            {{form.username}}
+                        </div>
+                        <div class="inputs">
+                            {{form.password}}
+                        </div>
+                        <div>
+                            {{form.submit}}
+                        </div>
+                        <div class="links">
+                            <a href="{{url_for('registration')}}">Create an account</a>
+                        </div>
+                    </form>
+                </article>
+        </section>
+        <hr>
+        </main>
+        <footer>
+            &copy;2021 | Planetarium | Developeando
+        </footer>
+    </div>
+</body>
+
+</html>
