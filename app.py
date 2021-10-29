@@ -147,8 +147,15 @@ def results():
     planet7 = req["planet7"]
     planet8 = req["planet8"]
 
+    # Keep track of how many they got right
+    points = 0
+
     all_planets = [planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8]
     planets_list = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
 
-    return render_template("results.html", all_planets=all_planets, planets_list=planets_list)
+    for i in range(len(planets_list)):
+        if all_planets[i].lower() == planets_list[i].lower():
+            points += 1
+
+    return render_template("results.html", all_planets=all_planets, planets_list=planets_list, points=points)
 
