@@ -67,7 +67,7 @@ def load_user(user_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
 # set up routes
 
@@ -96,6 +96,7 @@ def login():
                 return redirect(url_for('incorrect'))
     return render_template('login.html', form=form)
 
+
 @app.route('/incorrect')
 def incorrect():
     return render_template('incorrect.html')
@@ -118,20 +119,21 @@ def registration():
             # check if user is already registered
             return redirect(url_for('existing'))
         else:
-            encrypted_password = bcrypt.generate_password_hash(form.password.data)
+            encrypted_password = bcrypt.generate_password_hash(
+                form.password.data)
             new_user = UserTable(username=form.username.data,
-                                password=encrypted_password)
+                                 password=encrypted_password)
             db.session.add(new_user)
             db.session.commit()
             return redirect(url_for('login'))
 
     return render_template('registration.html', form=form)
 
+
 @app.route('/existing')
 def existing():
     return render_template('existing.html')
 
-    
 
 @app.route("/results", methods=["POST"])
 def results():
@@ -148,12 +150,13 @@ def results():
     # Keep track of how many they got right
     points = 0
 
-    all_planets = [planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8]
-    planets_list = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
+    all_planets = [planet1, planet2, planet3,
+                   planet4, planet5, planet6, planet7, planet8]
+    planets_list = ["mercury", "venus", "earth", "mars",
+                    "jupiter", "saturn", "uranus", "neptune"]
 
     for i in range(len(planets_list)):
         if all_planets[i].lower() == planets_list[i].lower():
             points += 1
 
     return render_template("results.html", all_planets=all_planets, planets_list=planets_list, points=points)
-
