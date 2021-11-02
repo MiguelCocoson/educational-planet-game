@@ -14,15 +14,15 @@
 <body>
     <div class="input-form">
         <form action="{{ url_for('results')}}" method="post">
-            <p>Planet #1: <input type="text" name="planet1"><br></p>
-            <p>Planet #2: <input type="text" name="planet2"><br></p>
-            <p>Planet #3: <input type="text" name="planet3"><br></p>
-            <p>Planet #4: <input type="text" name="planet4"><br></p>
-            <p>Planet #5: <input type="text" name="planet5"><br></p>
-            <p>Planet #6: <input type="text" name="planet6"><br></p>
-            <p>Planet #7: <input type="text" name="planet7"><br></p>
-            <p>Planet #8: <input type="text" name="planet8"><br></p>
-            <input type="submit" value="Submit">
+            <p id="mercury"><input type="text" name="planet1" placeholder="Planet #1"><br></p>
+            <p id="venus"><input type="text" name="planet2" placeholder="Planet #2"><br></p>
+            <p id="earth"><input type="text" name="planet3" placeholder="Planet #3"><br></p>
+            <p id="mars"><input type="text" name="planet4" placeholder="Planet #4"><br></p>
+            <p id="jupiter"><input type="text" name="planet5" placeholder="Planet #5"><br></p>
+            <p id="saturn"><input type="text" name="planet6" placeholder="Planet #6"><br></p>
+            <p id="uranus"><input type="text" name="planet7" placeholder="Planet #7"><br></p>
+            <p id="neptune"><input type="text" name="planet8" placeholder="Planet #8"><br></p>
+            <button>Submit</button> 
         </form>
     </div>
     {% block content%}{% endblock %}
