@@ -18,9 +18,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.db'
 app.config['SECRET_KEY'] = 'DevelopeandoPlanetas'
 # setup encryption for passwords
 bcrypt = Bcrypt(app)
-
 # create db model for users_table
-
 
 class UserTable(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
