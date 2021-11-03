@@ -1,7 +1,7 @@
-
 body {
-    background-image: url("/static/images/solar-system.jpg");
+    background-image: url("/static/images/solar_system.png");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .input-form {
     font-size: 1rem;
@@ -28,4 +28,76 @@ form input {
     padding-left: .25rem;
     font-size: .75rem;
 
+}
+
+#mercury {
+    margin-top: 47%;
+    margin-left: 9%;
+}
+
+#venus {
+    margin-top: 45%;
+    margin-left: -1%;
+}
+
+#earth {
+    margin-top: 41%;
+    margin-left: 3%;
+}
+
+#mars {
+    margin-top: 35%;
+    margin-left: 4%;
+}
+
+#jupiter {
+    margin-top: 33%;
+    margin-left: 0%;
+}
+
+#saturn {
+    margin-top: 21%;
+    margin-left: 14%;
+}
+
+#uranus {
+    margin-top: 12%;
+    margin-left: 9%;
+}
+
+#neptune {
+    margin-top: 7%;
+    margin-left: 0%;
+}
+
+button {
+    margin-top: 30%;
+    margin-left: -20%;
+    padding: 10px;
+    height: 150px;
+    width: 350px;
+    background-color: #46b64ca9;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 75px;
+    cursor: pointer;
+}
+
+#logout_user {
+    margin-top: 40%;
+    margin-left: -20%;
+    padding: 10px;
+    height: 100px;
+    width: 300px;
+    background-color:red;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 75px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#logout_user a{
+    text-decoration: none;
+    color: white;
 }
