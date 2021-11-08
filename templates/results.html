@@ -1,23 +1,52 @@
-
-{% extends "planets.html" %}
-{% block content %}
-<div class="results-game">
-    <h2> You got {{points}}/8 correct!</h2>
-    {% for number in range(planets_list| length) %}
-        {% if all_planets[number].lower() == planets_list[number].lower() %}
-            <p>{{number + 1}}. {{planets_list[number].capitalize()}} - Correct</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational - Planets Game</title>
+    <meta name="description" content="This webpage brings shows a game to help students learn the planets in the solar system.">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<header>
+    <h1>Educational Planets Game</h1>
+</header>
+<body>
+    <div class="results-game">
+        <h2> You got {{points}}/8 correct!</h2>
+        {% for number in range(planets_list| length) %}
+            {% if all_planets[number].lower() == planets_list[number].lower() %}
+                <p>{{number + 1}}. {{planets_list[number].capitalize()}} - Correct</p>
+            {% else %}
+                <p>{{number + 1}}. Wrong</p>
+            {% endif %}
+        {% endfor %}
+        {% if points == 8 %}
+        <p>Excellent Job! You have earned a Gold Badge!</p>
+        {% elif points >= 5 and points < 8 %}
+        <p>Great Job! You have earned a Silver Badge!</p>
+        {% elif points >= 3 and points < 5%}
+        <p>Good Job! You have earned a Bronze Badge!</p>
         {% else %}
-            <p>{{number + 1}}. Wrong</p>
+        <p>Come on! You can do better than that! Try again.</p>
         {% endif %}
-    {% endfor %}
-    {% if points == 8 %}
-    <p>Excellent Job! You have earned a Gold Badge!</p>
-    {% elif points >= 5 and points < 8 %}
-    <p>Great Job! You have earned a Silver Badge!</p>
-    {% elif points >= 3 and points < 5%}
-    <p>Good Job! You have earned a Bronze Badge!</p>
-    {% else %}
-    <p>Come on! You can do better than that! Try again.</p>
-    {% endif %}
-</div>
-{% endblock %}
+    </div>
+    <div class="input-form">
+        <form action="{{ url_for('results')}}" method="post">
+            <p id="mercury"><input type="text" name="planet1" placeholder="Planet #1"><br></p>
+            <p id="venus"><input type="text" name="planet2" placeholder="Planet #2"><br></p>
+            <p id="earth"><input type="text" name="planet3" placeholder="Planet #3"><br></p>
+            <p id="mars"><input type="text" name="planet4" placeholder="Planet #4"><br></p>
+            <p id="jupiter"><input type="text" name="planet5" placeholder="Planet #5"><br></p>
+            <p id="saturn"><input type="text" name="planet6" placeholder="Planet #6"><br></p>
+            <p id="uranus"><input type="text" name="planet7" placeholder="Planet #7"><br></p>
+            <p id="neptune"><input type="text" name="planet8" placeholder="Planet #8"><br></p>
+            <button>Submit</button>
+            <div id="logout_user">
+                <a href="{{url_for('logout')}}">Logout</a>
+            </div>> 
+        </form>
+    </div> 
+</body>
+
+</html>
