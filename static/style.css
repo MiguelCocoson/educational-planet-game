@@ -1,7 +1,7 @@
-
 body {
     background-image: url("/static/images/solar_system.png");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .input-form {
     font-size: 1rem;
@@ -52,7 +52,11 @@ form input {
 
 #jupiter {
     margin-top: 33%;
+<<<<<<< HEAD
     margin-left: 6%;
+=======
+    margin-left: 0%;
+>>>>>>> c564a42a523c85938f08f1453619afea74bcaaae
 }
 
 #saturn {
@@ -67,11 +71,19 @@ form input {
 
 #neptune {
     margin-top: 7%;
+<<<<<<< HEAD
     margin-left: 2%;
 }
 
 button {
     margin-top: 40%;
+=======
+    margin-left: 0%;
+}
+
+button {
+    margin-top: 30%;
+>>>>>>> c564a42a523c85938f08f1453619afea74bcaaae
     margin-left: -20%;
     padding: 10px;
     height: 150px;
@@ -81,4 +93,26 @@ button {
     letter-spacing: 1px;
     font-size: 75px;
     cursor: pointer;
+<<<<<<< HEAD
+=======
+}
+
+#logout_user {
+    margin-top: 40%;
+    margin-left: -20%;
+    padding: 10px;
+    height: 100px;
+    width: 300px;
+    background-color:red;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 75px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#logout_user a{
+    text-decoration: none;
+    color: white;
+>>>>>>> c564a42a523c85938f08f1453619afea74bcaaae
 }
