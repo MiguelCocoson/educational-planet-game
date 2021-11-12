@@ -52,11 +52,7 @@ form input {
 
 #jupiter {
     margin-top: 33%;
-<<<<<<< HEAD
     margin-left: 6%;
-=======
-    margin-left: 0%;
->>>>>>> c564a42a523c85938f08f1453619afea74bcaaae
 }
 
 #saturn {
@@ -70,20 +66,17 @@ form input {
 }
 
 #neptune {
-    margin-top: 7%;
-<<<<<<< HEAD
+    margin-top: 8%;
     margin-left: 2%;
 }
 
 button {
     margin-top: 40%;
-=======
     margin-left: 0%;
 }
 
 button {
     margin-top: 30%;
->>>>>>> c564a42a523c85938f08f1453619afea74bcaaae
     margin-left: -20%;
     padding: 10px;
     height: 150px;
@@ -93,8 +86,6 @@ button {
     letter-spacing: 1px;
     font-size: 75px;
     cursor: pointer;
-<<<<<<< HEAD
-=======
 }
 
 #logout_user {
@@ -114,5 +105,130 @@ button {
 #logout_user a{
     text-decoration: none;
     color: white;
->>>>>>> c564a42a523c85938f08f1453619afea74bcaaae
+}
+
+@media screen and (max-width: 2100px) {
+    #mercury {
+        margin-top: 47%;
+        margin-left: 9%;
+    }
+    
+    #venus {
+        margin-top: 45%;
+        margin-left: -1%;
+    }
+    
+    #earth {
+        margin-top: 41%;
+        margin-left: 2%;
+    }
+    
+    #mars {
+        margin-top: 35%;
+        margin-left: 3%;
+    }
+    
+    #jupiter {
+        margin-top: 33%;
+        margin-left: 6%;
+    }
+    
+    #saturn {
+        margin-top: 21%;
+        margin-left: 12%;
+    }
+    
+    #uranus {
+        margin-top: 12%;
+        margin-left: 9%;
+    }
+    
+    #neptune {
+        margin-top: 7%;
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    #mercury {
+        margin-top: 47%;
+        margin-left: 9%;
+    }
+    
+    #venus {
+        margin-top: 44%;
+        margin-left: -2%;
+    }
+    
+    #earth {
+        margin-top: 40%;
+        margin-left: 1%;
+    }
+    
+    #mars {
+        margin-top: 34%;
+        margin-left: 3%;
+    }
+    
+    #jupiter {
+        margin-top: 32%;
+        margin-left: 5%;
+    }
+    
+    #saturn {
+        margin-top: 20%;
+        margin-left: 12%;
+    }
+    
+    #uranus {
+        margin-top: 12%;
+        margin-left: 8%;
+    }
+    
+    #neptune {
+        margin-top: 7%;
+        margin-left: -1%;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    #mercury {
+        margin-top: 47%;
+        margin-left: 9%;
+    }
+    
+    #venus {
+        margin-top: 44%;
+        margin-left: -3%;
+    }
+    
+    #earth {
+        margin-top: 40%;
+        margin-left: 1%;
+    }
+    
+    #mars {
+        margin-top: 34%;
+        margin-left: 2%;
+    }
+    
+    #jupiter {
+        margin-top: 32%;
+        margin-left: 4%;
+    }
+    
+    #saturn {
+        margin-top: 20%;
+        margin-left: 11%;
+    }
+    
+    #uranus {
+        margin-top: 11%;
+        margin-left: 8%;
+    }
+    
+    #neptune {
+        margin-top: 6%;
+        margin-left: 0%;
+    }
 }
