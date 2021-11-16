@@ -49,3 +49,18 @@ main {
     padding: 10px;
     padding-left: 20px;
 }
+
+#play {
+    padding: 10px;
+    background-color: #46b64cc4;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.links {
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: #ceda2dd3;
+    padding: 10px;
+    border-radius: 10px;
+}
