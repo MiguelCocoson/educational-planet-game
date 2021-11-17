@@ -43,13 +43,6 @@ main {
     padding: 10px;
 }
 
-#play {
-    padding: 10px;
-    background-color: #46b64cc4;
-    border-radius: 10px;
-    margin: 15px;
-}
-
 .links {
     max-width: 200px;
     margin: 0 auto;
