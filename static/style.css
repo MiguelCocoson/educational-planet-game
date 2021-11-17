@@ -1,4 +1,5 @@
 body {
+    font-family: "Syne Mono", monospace;
     background-image: url("/static/images/solar_system.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -76,11 +77,13 @@ button {
 }
 
 button {
+    font-family: "Syne Mono", monospace;
+    color: white;
     margin-top: 30%;
     margin-left: -20%;
     padding: 10px;
-    height: 150px;
-    width: 350px;
+    height: 125px;
+    width: 325px;
     background-color: #46b64ca9;
     border-radius: 10px;
     letter-spacing: 1px;
@@ -94,7 +97,7 @@ button {
     padding: 10px;
     height: 100px;
     width: 300px;
-    background-color:red;
+    background-color:rgba(255, 0, 0, 0.623);
     border-radius: 10px;
     letter-spacing: 1px;
     font-size: 75px;
