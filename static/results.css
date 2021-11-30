@@ -1,7 +1,7 @@
 body {
     font-family: "Syne Mono", monospace;
     background-image: url("/static/images/solar_system.png");
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 .input-form {
@@ -32,54 +32,49 @@ form input {
 }
 
 #mercury {
-    margin-top: 47%;
+    margin-top: 32%;
     margin-left: 9%;
 }
 
 #venus {
-    margin-top: 45%;
+    margin-top: 30%;
     margin-left: -1%;
 }
 
 #earth {
-    margin-top: 41%;
+    margin-top: 26%;
     margin-left: 3%;
 }
 
 #mars {
-    margin-top: 35%;
+    margin-top: 20%;
     margin-left: 4%;
 }
 
 #jupiter {
-    margin-top: 33%;
+    margin-top: 18%;
     margin-left: 6%;
 }
 
 #saturn {
-    margin-top: 21%;
+    margin-top: 6%;
     margin-left: 14%;
 }
 
 #uranus {
-    margin-top: 12%;
+    margin-top: -3%;
     margin-left: 9%;
 }
 
 #neptune {
-    margin-top: 8%;
+    margin-top: -8%;
     margin-left: 2%;
-}
-
-button {
-    margin-top: 40%;
-    margin-left: 0%;
 }
 
 button {
     font-family: "Syne Mono", monospace;
     color: white;
-    margin-top: 30%;
+    margin-top: 20%;
     margin-left: -20%;
     padding: 10px;
     height: 125px;
@@ -92,7 +87,7 @@ button {
 }
 
 #logout_user {
-    margin-top: 38%;
+    margin-top: 27%;
     margin-left: -20%;
     padding: 10px;
     height: 100px;
@@ -112,127 +107,157 @@ button {
 
 @media screen and (max-width: 2100px) {
     #mercury {
-        margin-top: 47%;
+        margin-top: 30%;
         margin-left: 9%;
     }
     
     #venus {
-        margin-top: 45%;
+        margin-top: 28%;
         margin-left: -1%;
     }
     
     #earth {
-        margin-top: 41%;
+        margin-top: 23%;
         margin-left: 2%;
     }
     
     #mars {
-        margin-top: 35%;
+        margin-top: 17%;
         margin-left: 3%;
     }
     
     #jupiter {
-        margin-top: 33%;
+        margin-top: 16%;
         margin-left: 6%;
     }
     
     #saturn {
-        margin-top: 21%;
+        margin-top: 4%;
         margin-left: 12%;
     }
     
     #uranus {
-        margin-top: 12%;
+        margin-top: -5%;
         margin-left: 9%;
     }
     
     #neptune {
-        margin-top: 7%;
+        margin-top: -10%;
         margin-left: 1%;
+    }
+
+    button {
+        margin-top: 17%;
+        margin-left: -25%;
+    }
+    
+    #logout_user {
+        margin-top: 24%;
+        margin-left: -25%;
     }
 }
 
 @media screen and (max-width: 1900px) {
     #mercury {
-        margin-top: 47%;
+        margin-top: 28%;
         margin-left: 9%;
     }
     
     #venus {
-        margin-top: 44%;
+        margin-top: 25%;
         margin-left: -2%;
     }
     
     #earth {
-        margin-top: 40%;
+        margin-top: 21%;
         margin-left: 1%;
     }
     
     #mars {
-        margin-top: 34%;
+        margin-top: 15%;
         margin-left: 3%;
     }
     
     #jupiter {
-        margin-top: 32%;
+        margin-top: 14%;
         margin-left: 5%;
     }
     
     #saturn {
-        margin-top: 20%;
+        margin-top: 2%;
         margin-left: 12%;
     }
     
     #uranus {
-        margin-top: 12%;
+        margin-top: -7%;
         margin-left: 8%;
     }
     
     #neptune {
-        margin-top: 7%;
+        margin-top: -12%;
         margin-left: -1%;
+    }
+
+    button {
+        margin-top: 13%;
+        margin-left: -25%;
+    }
+    
+    #logout_user {
+        margin-top: 22%;
+        margin-left: -25%;
     }
 }
 
 @media screen and (max-width: 1750px) {
     #mercury {
-        margin-top: 47%;
+        margin-top: 26%;
         margin-left: 9%;
     }
     
     #venus {
-        margin-top: 44%;
+        margin-top: 23%;
         margin-left: -3%;
     }
     
     #earth {
-        margin-top: 40%;
+        margin-top: 19%;
         margin-left: 1%;
     }
     
     #mars {
-        margin-top: 34%;
+        margin-top: 13%;
         margin-left: 2%;
     }
     
     #jupiter {
-        margin-top: 32%;
+        margin-top: 12%;
         margin-left: 4%;
     }
     
     #saturn {
-        margin-top: 20%;
+        margin-top: 0%;
         margin-left: 11%;
     }
     
     #uranus {
-        margin-top: 11%;
+        margin-top: -9%;
         margin-left: 8%;
     }
     
     #neptune {
-        margin-top: 6%;
+        margin-top: -14%;
         margin-left: 0%;
+    }
+
+    button {
+        margin-top: 10%;
+        margin-left: -30%;
+    }
+    
+    #logout_user {
+        margin-top: 20%;
+        margin-left: -30%;
     }
 }
 
