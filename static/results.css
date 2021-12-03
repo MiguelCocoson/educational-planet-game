@@ -1,0 +1,262 @@
+body {
+    font-family: "Syne Mono", monospace;
+    background-image: url("/static/images/solar_system.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.input-form {
+    font-size: 1rem;
+}
+
+h1 {
+    color: white;
+}
+h2 {
+    color: white;
+}
+p {
+    color: white;
+    font-size: 1rem;
+}
+form {
+    display: flex;
+    font-size: 1rem;
+    padding: 0;
+}
+
+form input {
+    margin-top: .5rem;
+    padding-left: .25rem;
+    font-size: .75rem;
+
+}
+
+#mercury {
+    margin-top: 32%;
+    margin-left: 9%;
+}
+
+#venus {
+    margin-top: 30%;
+    margin-left: -1%;
+}
+
+#earth {
+    margin-top: 26%;
+    margin-left: 3%;
+}
+
+#mars {
+    margin-top: 20%;
+    margin-left: 4%;
+}
+
+#jupiter {
+    margin-top: 18%;
+    margin-left: 6%;
+}
+
+#saturn {
+    margin-top: 6%;
+    margin-left: 14%;
+}
+
+#uranus {
+    margin-top: -3%;
+    margin-left: 9%;
+}
+
+#neptune {
+    margin-top: -8%;
+    margin-left: 2%;
+}
+
+button {
+    font-family: "Syne Mono", monospace;
+    color: white;
+    margin-top: 20%;
+    margin-left: -20%;
+    padding: 10px;
+    height: 125px;
+    width: 325px;
+    background-color: #46b64ca9;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 75px;
+    cursor: pointer;
+}
+
+#logout_user {
+    margin-top: 27%;
+    margin-left: -20%;
+    padding: 10px;
+    height: 100px;
+    width: 300px;
+    background-color:rgba(255, 0, 0, 0.623);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 75px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#logout_user a{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 2100px) {
+    #mercury {
+        margin-top: 30%;
+        margin-left: 9%;
+    }
+    
+    #venus {
+        margin-top: 28%;
+        margin-left: -1%;
+    }
+    
+    #earth {
+        margin-top: 23%;
+        margin-left: 2%;
+    }
+    
+    #mars {
+        margin-top: 17%;
+        margin-left: 3%;
+    }
+    
+    #jupiter {
+        margin-top: 16%;
+        margin-left: 6%;
+    }
+    
+    #saturn {
+        margin-top: 4%;
+        margin-left: 12%;
+    }
+    
+    #uranus {
+        margin-top: -5%;
+        margin-left: 9%;
+    }
+    
+    #neptune {
+        margin-top: -10%;
+        margin-left: 1%;
+    }
+
+    button {
+        margin-top: 17%;
+        margin-left: -25%;
+    }
+    
+    #logout_user {
+        margin-top: 24%;
+        margin-left: -25%;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    #mercury {
+        margin-top: 28%;
+        margin-left: 9%;
+    }
+    
+    #venus {
+        margin-top: 25%;
+        margin-left: -2%;
+    }
+    
+    #earth {
+        margin-top: 21%;
+        margin-left: 1%;
+    }
+    
+    #mars {
+        margin-top: 15%;
+        margin-left: 3%;
+    }
+    
+    #jupiter {
+        margin-top: 14%;
+        margin-left: 5%;
+    }
+    
+    #saturn {
+        margin-top: 2%;
+        margin-left: 12%;
+    }
+    
+    #uranus {
+        margin-top: -7%;
+        margin-left: 8%;
+    }
+    
+    #neptune {
+        margin-top: -12%;
+        margin-left: -1%;
+    }
+
+    button {
+        margin-top: 13%;
+        margin-left: -25%;
+    }
+    
+    #logout_user {
+        margin-top: 22%;
+        margin-left: -25%;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    #mercury {
+        margin-top: 26%;
+        margin-left: 9%;
+    }
+    
+    #venus {
+        margin-top: 23%;
+        margin-left: -3%;
+    }
+    
+    #earth {
+        margin-top: 19%;
+        margin-left: 1%;
+    }
+    
+    #mars {
+        margin-top: 13%;
+        margin-left: 2%;
+    }
+    
+    #jupiter {
+        margin-top: 12%;
+        margin-left: 4%;
+    }
+    
+    #saturn {
+        margin-top: 0%;
+        margin-left: 11%;
+    }
+    
+    #uranus {
+        margin-top: -9%;
+        margin-left: 8%;
+    }
+    
+    #neptune {
+        margin-top: -14%;
+        margin-left: 0%;
+    }
+
+    button {
+        margin-top: 10%;
+        margin-left: -30%;
+    }
+    
+    #logout_user {
+        margin-top: 20%;
+        margin-left: -30%;
+    }
+}
