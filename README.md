@@ -1,12 +1,14 @@
 # Overview
 
-This program is targeted to elementary students for the science class. Our software will help children memorize names of the planets and where they are located in the solar system.
+This program is targeted to elementary students for the science class. Our software will help children test their knowledge on the names of the planets and where they are located in the solar system.
 
 # Development Environment
 
-This will be a educational website written html, css, python and flask.
+This will be a educational website written html and css for the front end, and python/flask and sqlite3 for the back end.
+
 The developers will be using VS CODE as their IDE, Github for source control and gimp for media creation.
-Heroku is PaaS service in which the app is the deployed, and along with GitHub CI/CD server has been setup to automate deployment of future changes in the main branch.
+
+Heroku is the PaaS service in which the app is the deployed, and along with GitHub CI/CD server that has been setup to automate deployment of future changes in the main branch.
 
 The app is accessible here - - [Educational Planets Game](https://learning-planets-game.herokuapp.com/)
 
