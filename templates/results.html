@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educational - Planets Game</title>
     <meta name="description" content="This webpage brings shows a game to help students learn the planets in the solar system.">
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/results.css">
 </head>
 <header>
     <h1>Educational Planets Game</h1>
 </header>
 <body>
-    <div class="results-game">
+    <span class="results-game">
         <h2> You got {{points}}/8 correct!</h2>
         {% for number in range(planets_list| length) %}
             {% if all_planets[number].lower() == planets_list[number].lower() %}
@@ -30,7 +30,7 @@
         {% else %}
         <p>Come on! You can do better than that! Try again.</p>
         {% endif %}
-    </div>
+    </span>
     <div class="input-form">
         <form action="{{ url_for('results')}}" method="post">
             <p id="mercury"><input type="text" name="planet1" placeholder="Planet #1"><br></p>
