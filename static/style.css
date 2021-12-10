@@ -1,3 +1,4 @@
+/* CSS for the planet game */
 body {
     font-family: "Syne Mono", monospace;
     background-image: url("/static/images/solar_system.png");
@@ -31,6 +32,7 @@ form input {
 
 }
 
+/* Location of the text box */
 #mercury {
     margin-top: 47%;
     margin-left: 9%;
@@ -110,6 +112,7 @@ button {
     color: white;
 }
 
+/* Repositions of the text box */
 @media screen and (max-width: 2100px) {
     #mercury {
         margin-top: 47%;

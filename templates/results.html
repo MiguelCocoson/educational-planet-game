@@ -1,3 +1,4 @@
+<!-- HTML for the game results -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,7 @@
     <h1>Educational Planets Game</h1>
 </header>
 <body>
+    <!-- Displays game results -->
     <span class="results-game">
         <h2> You got {{points}}/8 correct!</h2>
         {% for number in range(planets_list| length) %}
@@ -31,6 +33,7 @@
         <p>Come on! You can do better than that! Try again.</p>
         {% endif %}
     </span>
+    <!-- Keeps the text box to do another atempt -->
     <div class="input-form">
         <form action="{{ url_for('results')}}" method="post">
             <p id="mercury"><input type="text" name="planet1" placeholder="Planet #1"><br></p>
